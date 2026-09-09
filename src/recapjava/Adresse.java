@@ -9,5 +9,12 @@ package recapjava;
  * @author benjaminbastide
  */
 public class Adresse {
+    private String pays;
+    private String ville;
+    private int codePostal;
+    private String voie;
+    public boolean estEnFrance(){
+        return (this.pays.equals("France"));
     
+    }
 }
