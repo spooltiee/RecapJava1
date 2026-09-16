@@ -14,7 +14,7 @@ import java.util.List;
 public class PointDeLivraison {
     private String nom;
     private Adresse adresse;
-    private List<Colis> colisDeposes;
+    public List<Colis> colisDeposes;
 
     public PointDeLivraison(String nom, Adresse adresse, List<Colis> colisDeposes) {
         this.nom = nom;
@@ -23,6 +23,15 @@ public class PointDeLivraison {
     }
     
     public void associerColis(Colis colis){
-         this.colisDeposes.add(colis);
+
+        colisDeposes.add(colis);
+    }
+
+    public void rentabilite(){
+        float somme = 0;
+        for(Colis c:colisDeposes){
+            somme += c.calculerPrix();
+        }
+        System.out.println(somme);
     }
 }

@@ -24,7 +24,18 @@ public class RecapJava {
         System.out.println(AdresseAllemagne.estEnFrance());
         
         PointDeLivraison DepotFrance = new PointDeLivraison("Toulouse",AdresseFrance, new ArrayList<Colis>());
+        PointDeLivraison DepotAllemagne = new PointDeLivraison("<Frankfurt>",AdresseAllemagne, new ArrayList<Colis>());
 
+
+
+        Colis colis1 = new Colis(300, "Alice Martin", AdresseFrance, DepotAllemagne);
+        Colis colis2 = new Colis(1500, "Bruno Petit", AdresseFrance, DepotAllemagne);
+        Colis colis3 = new Colis(3500, "Chloé Robert", AdresseAllemagne, DepotFrance);
+        Colis colis4 = new Colis(6000, "David Simon", AdresseAllemagne, DepotFrance);
+
+
+        DepotFrance.rentabilite();
+        DepotAllemagne.rentabilite();
     }
     
 }

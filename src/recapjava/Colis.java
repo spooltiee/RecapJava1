@@ -20,6 +20,7 @@ public class Colis {
         this.nomDestinataire = nomDestinataire;
         this.adresseClient = adresseClient;
         this.pointDeLivraison = pointDeLivraison;
+        this.pointDeLivraison.associerColis(this);
     }
     public float calculerPrix(){
         float prix=0;
