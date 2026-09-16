@@ -4,6 +4,8 @@
  */
 package recapjava;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author benjaminbastide
@@ -20,6 +22,8 @@ public class RecapJava {
         
         System.out.println(AdresseFrance.estEnFrance());
         System.out.println(AdresseAllemagne.estEnFrance());
+        
+        PointDeLivraison DepotFrance = new PointDeLivraison("Toulouse",AdresseFrance, new ArrayList<Colis>());
 
     }
     
